@@ -1,0 +1,12 @@
+[Unit]
+Description=aliddns service
+After=network.target
+
+[Service]
+User=ddns
+Restart=always
+WorkingDirectory=/home/ddns/
+ExecStart=/home/ddns/aliddns/service
+
+[Install]
+WantedBy=multi-user.target
